@@ -439,3 +439,59 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   .date-item:last-child { border-bottom: 0; }
   .travel-grid { grid-template-columns: 1fr; }
 }
+
+
+/* approved Tilburg University branding */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1.05rem;
+  min-width: 0;
+}
+.brand-divider {
+  width: 1px;
+  height: 50px;
+  flex: 0 0 auto;
+  background: var(--line);
+}
+.university-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 0;
+}
+.university-brand img {
+  display: block;
+  width: min(330px, 29vw);
+  height: auto;
+}
+.footer-university-brand {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: .7rem .8rem;
+  background: var(--white);
+  border-radius: 2px;
+}
+.footer-university-brand img {
+  display: block;
+  width: min(300px, 100%);
+  height: auto;
+}
+@media (max-width: 900px) {
+  .header-inner { gap: 1rem; }
+  .brand-group { gap: .75rem; }
+  .brand-divider { height: 42px; }
+  .university-brand img { width: min(250px, 35vw); }
+}
+@media (max-width: 700px) {
+  .header-inner { align-items: center; }
+  .brand-group { gap: .6rem; }
+  .brand-divider { display: none; }
+  .university-brand img { width: 150px; }
+  .brand-copy span { display: none; }
+}
+@media (max-width: 480px) {
+  .university-brand img { width: 118px; }
+  .brand-mark { width: 40px; height: 40px; font-size: .92rem; }
+  .brand-copy strong { font-size: .95rem; }
+}
