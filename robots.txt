@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://emotions2027.github.io/Tilburg-Emotions2027/sitemap.xml
