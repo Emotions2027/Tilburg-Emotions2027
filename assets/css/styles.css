@@ -495,3 +495,173 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   .brand-mark { width: 40px; height: 40px; font-size: .92rem; }
   .brand-copy strong { font-size: .95rem; }
 }
+
+
+/* v4 refined conference identity */
+.brand-mark { display: none !important; }
+.header-meta { display: none !important; }
+.header-inner {
+  min-height: 76px;
+  gap: 1.25rem;
+}
+.brand-group {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.brand {
+  gap: 0;
+  flex: 0 1 auto;
+}
+.brand-copy strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.36rem;
+  letter-spacing: -.018em;
+}
+.brand-copy span {
+  margin-top: .08rem;
+  font-size: .72rem;
+  letter-spacing: .055em;
+}
+.brand-divider {
+  height: 34px;
+  margin-left: auto;
+}
+.university-brand {
+  flex: 0 0 auto;
+}
+.university-brand img {
+  width: 182px;
+  max-height: 48px;
+}
+.speaker-card .speaker-initials,
+.speaker-grid.compact .speaker-initials {
+  display: none !important;
+}
+.speaker-card {
+  min-height: 0;
+  padding-top: 1.45rem;
+}
+.speaker-grid.compact .speaker-card {
+  min-height: 0;
+}
+.home-keynotes {
+  margin: 2.7rem 0 3rem;
+}
+.keynote-simple-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 1.35rem 0 1.05rem;
+  border-top: 1px solid var(--line);
+}
+.keynote-simple-item {
+  display: grid;
+  gap: .18rem;
+  padding: 1rem 1.05rem 1.05rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.keynote-simple-item:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+.keynote-simple-item:nth-child(even) {
+  padding-left: 1.05rem;
+}
+.keynote-simple-item strong {
+  color: var(--navy-deep);
+  font: 650 1.12rem/1.25 Georgia, "Times New Roman", serif;
+}
+.keynote-simple-item span {
+  color: var(--muted);
+  font-size: .91rem;
+}
+.text-link {
+  font-weight: 750;
+  text-decoration: none;
+}
+.text-link:hover { text-decoration: underline; }
+
+.save-date-section {
+  display: grid;
+  grid-template-columns: minmax(260px, .9fr) minmax(0, 1.2fr);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  align-items: center;
+  margin: 3.2rem 0 3.4rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #f7f8fa;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(0,38,77,.06);
+}
+.save-date-card {
+  min-height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.65rem;
+  color: var(--navy-deep);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(205,153,51,.17), transparent 25%),
+    linear-gradient(145deg, #fff 0%, #f4f7fa 100%);
+  border-top: 5px solid var(--gold);
+  border-bottom: 8px solid var(--navy);
+}
+.save-date-kicker {
+  margin-bottom: .4rem;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.save-date-name {
+  font: 650 clamp(2rem, 4vw, 3rem)/1 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+}
+.save-date-rule {
+  width: 72px;
+  height: 3px;
+  margin: 1.05rem 0;
+  background: var(--gold);
+}
+.save-date-meta {
+  font-size: .98rem;
+  font-weight: 700;
+}
+.save-date-call {
+  margin-top: 1.15rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--line);
+  color: var(--gold-deep);
+  font-weight: 800;
+}
+.save-date-copy h2 {
+  margin-top: 0;
+}
+.save-date-copy p {
+  max-width: 610px;
+}
+
+@media (max-width: 900px) {
+  .university-brand img { width: 155px; }
+  .brand-copy strong { font-size: 1.2rem; }
+  .save-date-section { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .brand-group { gap: .7rem; }
+  .brand-divider { display: block; height: 28px; }
+  .university-brand img { width: 125px; }
+  .brand-copy span { display: block; font-size: .62rem; }
+  .keynote-simple-grid { grid-template-columns: 1fr; }
+  .keynote-simple-item,
+  .keynote-simple-item:nth-child(even) {
+    padding: .9rem 0;
+    border-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header-inner { min-height: 68px; }
+  .brand-copy strong { font-size: 1.05rem; }
+  .brand-copy span { display: none; }
+  .brand-divider { height: 24px; }
+  .university-brand img { width: 104px; }
+}
