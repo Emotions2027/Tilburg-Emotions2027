@@ -665,3 +665,86 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   .brand-divider { height: 24px; }
   .university-brand img { width: 104px; }
 }
+
+
+/* v3 cleaner conference presentation */
+.brand-group {
+  flex: 1 1 auto;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.brand { gap: 0; }
+.brand-copy strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  letter-spacing: -.015em;
+}
+.brand-copy span {
+  font-size: .72rem;
+  letter-spacing: .055em;
+}
+.brand-divider, .brand-mark { display: none !important; }
+.university-brand { flex: 0 0 auto; }
+.university-brand img {
+  width: 165px;
+  max-width: 20vw;
+}
+.footer-university-brand {
+  padding: .5rem .65rem;
+}
+.footer-university-brand img {
+  width: 210px;
+}
+.dates-strip-compact {
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2.35rem 0 2.4rem;
+}
+.keynote-summary {
+  margin: 0 0 2.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.keynote-summary .kicker {
+  margin: 0 0 .3rem;
+  color: var(--gold-deep);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.keynote-summary p { margin: 0; }
+.keynote-summary a {
+  flex: 0 0 auto;
+  font-weight: 750;
+  text-decoration: none;
+}
+.speaker-card {
+  min-height: 0;
+  padding-top: 1.4rem;
+}
+.speaker-grid.compact .speaker-card { min-height: 0; }
+
+@media (max-width: 900px) {
+  .brand-group { gap: 1rem; }
+  .university-brand img { width: 145px; max-width: 28vw; }
+  .dates-strip-compact { grid-template-columns: 1fr; }
+  .dates-strip-compact .date-item { border-right: 0; border-bottom: 1px solid var(--line); }
+  .dates-strip-compact .date-item:last-child { border-bottom: 0; }
+}
+@media (max-width: 700px) {
+  .brand-copy span { display: block; font-size: .64rem; }
+  .university-brand img { width: 118px; max-width: 32vw; }
+  .keynote-summary { display: block; }
+  .keynote-summary a { display: inline-block; margin-top: .75rem; }
+}
+@media (max-width: 480px) {
+  .brand-copy strong { font-size: 1.02rem; }
+  .brand-copy span { font-size: .58rem; }
+  .university-brand img { width: 95px; }
+}
