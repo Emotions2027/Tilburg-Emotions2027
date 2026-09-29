@@ -48,7 +48,7 @@
   >
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260929">
 
   <!-- Structured event data -->
   <script type="application/ld+json">
@@ -113,7 +113,7 @@
           aria-label="Tilburg University"
         >
           <img
-            src="assets/img/tilburg-university-tsb.svg"
+            src="assets/img/tilburg-university-tsb.svg" width="300" height="79"
             alt="Tilburg University — School of Social and Behavioral Sciences"
           >
         </a>
@@ -122,7 +122,7 @@
 
       <button
         class="menu-toggle"
-        data-menu-toggle
+        type="button" data-menu-toggle aria-controls="mobile-navigation"
         aria-expanded="false"
         aria-label="Open navigation"
       >
@@ -131,6 +131,16 @@
 
     </div>
   </header>
+<div class="mobile-nav-wrap" data-mobile-nav-wrap>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile conference navigation">
+          <a href="speakers.html">Speakers</a>
+          <a href="program.html">Program</a>
+          <a href="submissions.html">Submissions</a>
+          <a href="registration.html">Registration</a>
+          <a href="venue-accommodation.html">Venue &amp; Accommodation</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+</div>
 
   <main id="main">
 
@@ -138,7 +148,7 @@
     <section class="hero" aria-labelledby="hero-title">
 
       <img
-  class="hero-media"
+  class="hero-media" width="1986" height="792" fetchpriority="high"
   src="assets/img/emotions-hero.webp"
   alt="Stylized profile with illuminated neural-network imagery representing emotion and brain science"
 >
@@ -212,9 +222,9 @@
       <!-- Homepage text -->
       <div class="content">
 
-        <h1>
+        <h2 class="content-title">
           Welcome to Emotions 2027
-        </h1>
+        </h2>
 
         <p class="lead">
           Join us from <strong>October 6–8, 2027</strong> for
@@ -337,7 +347,7 @@
           rel="noopener"
         >
           <img
-            src="assets/img/tilburg-university-tsb.svg"
+            src="assets/img/tilburg-university-tsb.svg" width="300" height="79"
             alt="Tilburg University — School of Social and Behavioral Sciences"
           >
         </a>
@@ -391,7 +401,7 @@
 
   </footer>
 
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js?v=20260929"></script>
 
 </body>
 </html>
